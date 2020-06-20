@@ -81,6 +81,7 @@ Our findings are as follows:
 ### **a. Number of Nodes Explored**
 <br>
 <br>
+
 ![image](images/nodes.PNG)
 
 
@@ -96,6 +97,7 @@ the introduction of big and custom big maze.
 ### **b. Computation Time**
 <br>
 <br>
+
 ![image](images/computation.PNG)
 
 
@@ -121,6 +123,7 @@ proper quantitative analysis of the algorithm but only portray
 the tradeoff between node exploration and computation time. 
 <br>
 <br>
+
 ![image](images/score.PNG)
 
 
