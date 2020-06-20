@@ -41,4 +41,17 @@ needed for algorithm execution. All these together help us
 understand the pros and the cons of these algorithms and better
 understand their use case in practicality.
 Our findings are as follows:
-a. Number of Nodes Explored
+**a. Number of Nodes Explored**
+<br>
+<br>
+
+We can say that the nodes explored by A* baseline for a simple
+and less complex maze will be similar or better than the D* lite
+algorithm. With a higher complexity medium maze, the
+performance of the D* lite improves in terms of the nodes
+explored which reaches a stage of a massive improvement with
+the introduction of big and custom big maze.
+<br>
+<br>
+
+**b. Computation Time**
