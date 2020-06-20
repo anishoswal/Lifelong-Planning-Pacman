@@ -80,7 +80,6 @@ Our findings are as follows:
 
 ### **a. Number of Nodes Explored**
 <br>
-<br>
 
 ![image](images/nodes.PNG)
 
@@ -96,7 +95,6 @@ the introduction of big and custom big maze.
 
 ### **b. Computation Time**
 <br>
-<br>
 
 ![image](images/computation.PNG)
 
@@ -111,6 +109,8 @@ A* base and A* lifelong for complex mazes but shows similar
 computation time for simple mazes. It was also observed that
 the computational time of A* lifelong and A* baseline
 increased drastically as compared to D* lite.
+<br>
+<br>
 
 ### **c. Pacman Score**
 The pacman scores were calculated by the project environment
@@ -121,7 +121,6 @@ outperformed the A* lifelong algorithm by a small margin
 generally. The pacman scores however does not give us a
 proper quantitative analysis of the algorithm but only portray
 the tradeoff between node exploration and computation time. 
-<br>
 <br>
 
 ![image](images/score.PNG)
@@ -137,6 +136,8 @@ minimum to no tradeoff between its performance. The D* lite
 algorithm showed improved results, better to similar scores, a
 drastically reduced computation time and far less nodes
 explored compared.
+<br>
+<br>
 
 ## Conclusion
 We can conclude that the number of nodes explored, and the
