@@ -1,0 +1,55 @@
+#layout type : bigCornerscustom
+
+#run below command on terminal to check the A* baseline algorithm on bigCornercustom maze
+python pacman.py -l bigCornerscustom -z .5 -p SearchAgent -a fn=abase,heuristic=manhattanHeuristic
+
+#run below command on terminal to check the A* lifelong algorithm on bigCornercustom maze
+python pacman.py -l bigCornerscustom -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic
+
+#run below command on terminal to check the D* lite algorithm on bigCornercustom maze
+python pacman.py -l bigCornerscustom -z .5 -p SearchAgent -a fn=dstar,heuristic=manhattanHeuristic
+
+
+#layout type : bigMaze
+
+#run below command on terminal to check the A* baseline algorithm on bigMaze
+python pacman.py -l bigMaze -z .5 -p SearchAgent -a fn=abase,heuristic=manhattanHeuristic
+
+#run below command on terminal to check the A* lifelong algorithm on bigMaze
+python pacman.py -l bigMaze -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic
+
+#run below command on terminal to check the D* lite algorithm on bigMaze
+python pacman.py -l bigMaze -z .5 -p SearchAgent -a fn=dstar,heuristic=manhattanHeuristic
+
+#layout type : mediumMaze
+
+#run below command on terminal to check the A* baseline algorithm on mediumMaze
+python pacman.py -l mediumMaze -z .5 -p SearchAgent -a fn=abase,heuristic=manhattanHeuristic
+
+#run below command on terminal to check the A* lifelong algorithm on mediumMaze
+python pacman.py -l mediumMaze -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic
+
+#run below command on terminal to check the D* lite algorithm on mediumMaze
+python pacman.py -l mediumMaze -z .5 -p SearchAgent -a fn=dstar,heuristic=manhattanHeuristic
+
+#layout type : smallMaze
+
+#run below command on terminal to check the A* baseline algorithm on smallMaze
+python pacman.py -l smallMaze -z .5 -p SearchAgent -a fn=abase,heuristic=manhattanHeuristic
+
+#run below command on terminal to check the A* lifelong algorithm on smallMaze
+python pacman.py -l smallMaze -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic
+
+#run below command on terminal to check the D* lite algorithm on smallMaze
+python pacman.py -l smallMaze -z .5 -p SearchAgent -a fn=dstar,heuristic=manhattanHeuristic
+
+#layout type : contoursMaze
+
+#run below command on terminal to check the A* baseline algorithm on contoursMaze
+python pacman.py -l contoursMaze -z .5 -p SearchAgent -a fn=abase,heuristic=manhattanHeuristic
+
+#run below command on terminal to check the A* lifelong algorithm on contoursMaze
+python pacman.py -l contoursMaze -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic
+
+#run below command on terminal to check the D* lite algorithm on contoursMaze
+python pacman.py -l contoursMaze -z .5 -p SearchAgent -a fn=dstar,heuristic=manhattanHeuristic
