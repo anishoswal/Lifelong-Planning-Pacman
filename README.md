@@ -13,10 +13,46 @@ A* baseline search algorithm tries to minimize the total estimated cost of the s
 
 When a node in A* is selected for expansion it means that the optimal path to that node is already found. f(n) is the true cost of the goal node and all the other nodes expanded will have at least that cost. If C* is the cost of optimal solution path, then A* will expand all the nodes with f(n) < C* and it will also expand some more nodes around the goal node before fixing the goal node. The time complexity of A* is dependent on the heuristic and in the worst case of an unbounded search space is exponential in the depth of the solution which is b<sup>d</sup> where b is the branching factor and d is the depth. When A* assumes infinite state space, the algorithm will not terminate and run indefinitely.
 
-According to Koenig & Likhachev Life-Long A* is an algorithm that generalizes both DynamicSWSF-FP and A*. It is due to this approach that it uses two different techniques to reduce its planning time. A* Life Long is an incremental version of A* algorithm. It is specifically applicable to finite graph search problems with known graphs whose edge cost increases or decreases over time period. LPA* always defines the shortest path from a given start vertex s start to any predecessor s’ which minimizes g(s’) + c(s’,s) until the start state is reached.  Life-Long A* does not make all the vertices locally consistent after some edge costs have changed but it uses the heuristics and focuses only on the g – calues that are relevant for computing a shortest path and updates them. LifeLong A* knows both the topology of the graph as well as the edge
-cost currently. In Life-Long A* g*(s) is considered to be the distance from the start state to the current state which correspond to the g-values of a A* search. In A* Life-Long similar to A* heuristics is used to calculate the distance from the current state to the goal state and the heuristic should be consistent. In Life-Long A* a second set of values called the rhs are also maintained which are one-step lookahead values based on the g-values and thus are potentially more informed as compared to the g-values.
+According to Koenig & Likhachev Life-Long A* is an algorithm that generalizes both DynamicSWSF-FP and A*. It is due to this approach that it uses two different techniques to reduce its planning time. A* Life Long is an incremental version of A* algorithm. It is specifically applicable to finite graph search problems with known graphs whose edge cost increases or decreases over time period. LPA* always defines the shortest path from a given start vertex s start to any predecessor s’ which minimizes g(s’) + c(s’,s) until the start state is reached.  Life-Long A* does not make all the vertices locally consistent after some edge costs have changed but it uses the heuristics and focuses only on the g – calues that are relevant for computing a shortest path and updates them. LifeLong A* knows both the topology of the graph as well as the edge cost currently. In Life-Long A* g*(s) is considered to be the distance from the start state to the current state which correspond to the g-values of a A* search. In A* Life-Long similar to A* heuristics is used to calculate the distance from the current state to the goal state and the heuristic should be consistent. In Life-Long A* a second set of values called the rhs are also maintained which are one-step lookahead values based on the g-values and thus are potentially more informed as compared to the g-values.
 
 D* Lite algorithm is developed from A* Life-Long algorithm that repeatedly determines shortest paths between the current vertex the agent is in and the goal vertex as the cost of the edge in the graph changes with the movement of the agent towards the goal vertex. The D* Lite has no assumptions about how the cost of the edge changes. It is used to solve the goal directed navigation problems in the unknown terrain. In D* Lite algorithm we first need to switch the search direction as compared to Life-Long A*. unlike Life-Long A* the D* Lite searches from the goal vertex to the start vertex and thus its g- values are estimates of the goal distances. D* Lite is basically A* Life-Long in which the start and the goal vertex are exchanged, and all the edges are reversed. Unlike A* Life- Long D* Lite uses only one tie breaking criterion when the priorities are compared. After computation one can follow the shortest path from the start state to the goal state by always moving from the current vertex s to any successor s’ that minimizes the value for c(s, s’) + g(s’) until the goal is reached. In D* Lite the heuristics are derived by relaxing the search problems. D* Lite uses a method derived from D* to avoid the reordering of the priority queue. To avoid re-ordering, we maintain the variable and incrementally increase its value when robot moves towards the goal state. As the terrain gets larger, D* lite algorithm expands fewer nodes than A* and LPA* algorithms while being far more efficient than the both of them. One of its main uses is in the domain of greedy mapping.
+
+## Working Testing Requirements
+- **Python:** v2.7+
+- **Operating System:** Ubuntu 18.04 LTS
+
+## Command Line Arguments
+Please use the commands below on Linux terminal to run the program.
+
+### Layout Type : bigCornerscustom
+
+- A* Algorithm
+```
+python pacman.py -l bigCornerscustom -z .5 -p SearchAgent -a fn=abase,heuristic=manhattanHeuristic
+python pacman.py -l bigMaze -z .5 -p SearchAgent -a fn=abase,heuristic=manhattanHeuristic
+python pacman.py -l mediumMaze -z .5 -p SearchAgent -a fn=abase,heuristic=manhattanHeuristic
+python pacman.py -l smallMaze -z .5 -p SearchAgent -a fn=abase,heuristic=manhattanHeuristic
+python pacman.py -l contoursMaze -z .5 -p SearchAgent -a fn=abase,heuristic=manhattanHeuristic
+```
+
+- A* Lifelong Algorithm
+```
+python pacman.py -l bigCornerscustom -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic
+python pacman.py -l bigMaze -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic
+python pacman.py -l mediumMaze -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic
+python pacman.py -l smallMaze -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic
+python pacman.py -l contoursMaze -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic
+```
+
+- D* lite Algorithm
+```
+python pacman.py -l bigCornerscustom -z .5 -p SearchAgent -a fn=dstar,heuristic=manhattanHeuristic
+python pacman.py -l bigMaze -z .5 -p SearchAgent -a fn=dstar,heuristic=manhattanHeuristic
+python pacman.py -l mediumMaze -z .5 -p SearchAgent -a fn=dstar,heuristic=manhattanHeuristic
+python pacman.py -l smallMaze -z .5 -p SearchAgent -a fn=dstar,heuristic=manhattanHeuristic
+python pacman.py -l contoursMaze -z .5 -p SearchAgent -a fn=dstar,heuristic=manhattanHeuristic
+```
+
 
 ## Results
 For comparison of the search algorithms we choose 5 different
@@ -42,7 +78,7 @@ understand the pros and the cons of these algorithms and better
 understand their use case in practicality.
 Our findings are as follows:
 
-**a. Number of Nodes Explored**
+### **a. Number of Nodes Explored**
 <br>
 <br>
 ![image](images/nodes.PNG)
@@ -57,7 +93,7 @@ the introduction of big and custom big maze.
 <br>
 <br>
 
-**b. Computation Time**
+### **b. Computation Time**
 <br>
 <br>
 ![image](images/computation.PNG)
@@ -74,7 +110,7 @@ computation time for simple mazes. It was also observed that
 the computational time of A* lifelong and A* baseline
 increased drastically as compared to D* lite.
 
-**c. Pacman Score**
+### **c. Pacman Score**
 The pacman scores were calculated by the project environment
 that was provided to us. Based on the results we can say that
 when the mazes were simple and less complex the pacman scores were same for all the 3 algorithms but as the complexity
@@ -110,10 +146,10 @@ computation time required by the D* Lite algorithm is also less
 as compared to the A* Baseline and A* Life-Long algorithms
 for complex environment. The score obtained by the pacman
 was same for all the algorithms till the environment was simple and as the complexity increases the scores obtained by the
-pacman was higher for D*Lite and A* baseline as compared to
+pacman was higher for D* Lite and A* baseline as compared to
 A* Life-Long. From all the results derived in this environment
-we can conclude that D*Lite performs better as compared to
-A*baseline and A*Life-Long with the increase in complexity
-of the environment. In order to use this D*Lite algorithm for the
+we can conclude that D* Lite performs better as compared to
+A* baseline and A* Life-Long with the increase in complexity
+of the environment. In order to use this D* Lite algorithm for the
 environments having multiple food pallets and where ghosts are
 present, we need to extend the logic. 
