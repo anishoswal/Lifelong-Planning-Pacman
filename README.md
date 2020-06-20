@@ -46,6 +46,8 @@ Our findings are as follows:
 <br>
 <br>
 ![image](images/nodes.PNG)
+
+
 We can say that the nodes explored by A* baseline for a simple
 and less complex maze will be similar or better than the D* lite
 algorithm. With a higher complexity medium maze, the
@@ -59,6 +61,8 @@ the introduction of big and custom big maze.
 <br>
 <br>
 ![image](images/computation.PNG)
+
+
 For the analysis of computation time of the algorithms we used
 a machine with 8 gigabytes of RAM, a 64-bit 4 core intel 6200U
 CPU, Intel HD 520 graphics running on Ubuntu 18.04 LTS.
@@ -82,6 +86,8 @@ the tradeoff between node exploration and computation time.
 <br>
 <br>
 ![image](images/score.PNG)
+
+
 From the above-mentioned results, we come to a final result 
 that A* lifelong algorithm results even though similar for
 simple tasks are not as good as A* baseline algorithm for
