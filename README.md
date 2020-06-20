@@ -24,7 +24,7 @@ D* Lite algorithm is developed from A* Life-Long algorithm that repeatedly deter
 ## Command Line Arguments
 Please use the commands below on Linux terminal to run the program.
 
-### A* Algorithm
+#### A* Algorithm
 ```
 python pacman.py -l bigCornerscustom -z .5 -p SearchAgent -a fn=abase,heuristic=manhattanHeuristic
 python pacman.py -l bigMaze -z .5 -p SearchAgent -a fn=abase,heuristic=manhattanHeuristic
@@ -33,7 +33,7 @@ python pacman.py -l smallMaze -z .5 -p SearchAgent -a fn=abase,heuristic=manhatt
 python pacman.py -l contoursMaze -z .5 -p SearchAgent -a fn=abase,heuristic=manhattanHeuristic
 ```
 
-### A* Lifelong Algorithm
+#### A* Lifelong Algorithm
 ```
 python pacman.py -l bigCornerscustom -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic
 python pacman.py -l bigMaze -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic
@@ -42,7 +42,7 @@ python pacman.py -l smallMaze -z .5 -p SearchAgent -a fn=astar,heuristic=manhatt
 python pacman.py -l contoursMaze -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic
 ```
 
-### D* lite Algorithm
+#### D* lite Algorithm
 ```
 python pacman.py -l bigCornerscustom -z .5 -p SearchAgent -a fn=dstar,heuristic=manhattanHeuristic
 python pacman.py -l bigMaze -z .5 -p SearchAgent -a fn=dstar,heuristic=manhattanHeuristic
@@ -76,7 +76,7 @@ understand the pros and the cons of these algorithms and better
 understand their use case in practicality.
 Our findings are as follows:
 
-### **a. Number of Nodes Explored**
+#### **a. Number of Nodes Explored**
 <br>
 
 ![image](images/nodes.PNG)
@@ -91,7 +91,7 @@ the introduction of big and custom big maze.
 <br>
 <br>
 
-### **b. Computation Time**
+#### **b. Computation Time**
 <br>
 
 ![image](images/computation.PNG)
@@ -110,7 +110,7 @@ increased drastically as compared to D* lite.
 <br>
 <br>
 
-### **c. Pacman Score**
+#### **c. Pacman Score**
 The pacman scores were calculated by the project environment
 that was provided to us. Based on the results we can say that
 when the mazes were simple and less complex the pacman scores were same for all the 3 algorithms but as the complexity
