@@ -24,7 +24,7 @@ D* Lite algorithm is developed from A* Life-Long algorithm that repeatedly deter
 ## Command Line Arguments
 Please use the commands below on Linux terminal to run the program.
 
-#### A* Algorithm
+### A* Algorithm
 ```
 python pacman.py -l bigCornerscustom -z .5 -p SearchAgent -a fn=abase,heuristic=manhattanHeuristic
 python pacman.py -l bigMaze -z .5 -p SearchAgent -a fn=abase,heuristic=manhattanHeuristic
@@ -33,7 +33,7 @@ python pacman.py -l smallMaze -z .5 -p SearchAgent -a fn=abase,heuristic=manhatt
 python pacman.py -l contoursMaze -z .5 -p SearchAgent -a fn=abase,heuristic=manhattanHeuristic
 ```
 
-#### A* Lifelong Algorithm
+### A* Lifelong Algorithm
 ```
 python pacman.py -l bigCornerscustom -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic
 python pacman.py -l bigMaze -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic
@@ -42,7 +42,7 @@ python pacman.py -l smallMaze -z .5 -p SearchAgent -a fn=astar,heuristic=manhatt
 python pacman.py -l contoursMaze -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic
 ```
 
-#### D* lite Algorithm
+### D* lite Algorithm
 ```
 python pacman.py -l bigCornerscustom -z .5 -p SearchAgent -a fn=dstar,heuristic=manhattanHeuristic
 python pacman.py -l bigMaze -z .5 -p SearchAgent -a fn=dstar,heuristic=manhattanHeuristic
